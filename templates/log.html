@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class ="jumbotron text-left">
+        <table class="table table-striped" >
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Session ID</th>
+                    <th scope="col">Time Of Access</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in range(n) %}
+                <tr>
+                    <th scope="row">{{i}}</th>
+                    <td>{{row[i][0]}}</td>
+                    <td>{{row[i][1]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</div>
+{% endblock %}

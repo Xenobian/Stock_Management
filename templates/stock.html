@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class ="jumbotron text-left">
+    <h1>Stock Details:</h1>
+    <table border = "1" cellpadding="10px">
+        <tr>
+            <td><h4> Company Name </h4></td>
+            <td>{{stock['companyName']}}</td>
+        </tr>
+        <tr>
+            <td><h4> Stock Price</h4></td>
+            <td>{{stock['stock_price']}}</td>
+        </tr>
+        <tr>
+            <td><h4> Date  </h4></td>
+            <td>{{stock['date']}}</td>
+        </tr>
+        <tr>
+            <td><h4> Market Cap  </h4></td>
+            <td>{{stock['market_cap']}} crores</td>
+        </tr>
+        <tr>
+            <td><h4> 52 Week High  </h4></td>
+            <td>{{stock['high_52_week']}}</td>
+        </tr>
+        <tr>
+            <td><h4> 52 Week Low  </h4></td>
+            <td>{{stock['low_52_week']}}</td>
+        </tr>
+    </table> 
+</div>
+<div class ="jumbotron text-left">
+    <h4>BUY QUANTITY:</h4>
+    <form action="" method="POST">
+        <input type="text" name="quantity">
+        <button type="Buy" class="btn btn-primary">BUY</button>
+    </form> 
+</div>
+{% endblock %}
+    

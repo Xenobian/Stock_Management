@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class ="jumbotron text-center">
+            <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Company Name</th>
+                        <th scope="col">Buy Price</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">Total Value</th>
+                        <th scope="col">P&L</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {% for i in range(n) %}
+                      <tr>
+                        <th scope="row">{{i}}</th>
+                        <td>{{row[i][0]}}</td>
+                        <td>{{row[i][1]}}</td>
+                        <td>{{row[i][2]}}</td>
+                        <td>{{row[i][3]}}</td>
+                        <td>{{row[i][4]}}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+            </table>
+    </div> 
+    <div class ="jumbotron text-left">
+    TOTAL PROFIT/LOSS: {{tpl}}
+    </div>
+    <div class ="jumbotron text-left">
+    STOCK INFORMATION:     
+    <form action="" method="POST">
+        <select class="form-group" name= "stock" >
+            {% for stock in stock_list %}
+            <option value= "{{stock}}" SELECTED>{{stock}}</option>"
+            {% endfor %}
+        </select>
+        <button type="submit" class="btn btn-primary">Info</button>
+    </form>    
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 d-none d-md-inline-block" href="/">Home</a>
+      <a class="py-2 d-none d-md-inline-block" href="/about">About</a>
+      {% if session.logged_in %}
+      <a class="py-2 d-none d-md-inline-block" href="/portfolio">Portfolio</a>
+      <a class="py-2 d-none d-md-inline-block" href="/log">Log</a>
+      <a class="py-2 d-none d-md-inline-block" href="/logout">Logout</a>
+      {% else %}
+      <a class="py-2 d-none d-md-inline-block" href="/login">Login</a>
+      <a class="py-2 d-none d-md-inline-block" href="/register">Register</a>
+      {% endif %}
+    </div>
+</nav>
